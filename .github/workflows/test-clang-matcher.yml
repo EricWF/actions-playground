@@ -26,6 +26,6 @@ jobs:
         echo "::add-matcher::.github/clang-problem-matcher.json"
         clang++ -Wall -Werror -std=c++17 src/test.cpp -o test
         echo "::remove-matcher owner=clang::"
-      continue-on-error: true
+        exit 1
 
 
