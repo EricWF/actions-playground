@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+env:
+  NO_COLOR: 1
 
 jobs:
   build:
