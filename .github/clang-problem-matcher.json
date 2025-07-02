@@ -4,13 +4,12 @@
             "owner": "clang",
             "pattern": [
                 {
-                    "regexp": "^(.+):(\\d+):(\\d+):\\s+(error|warning|note):\\s+(.+?)(?:\\s+\\[(.+)\\])?$",
+                    "regexp": "^(.+):(\\d+):(\\d+):\\s+(error|warning|note):\\s+(.+)$",
                     "file": 1,
                     "line": 2,
                     "column": 3,
                     "severity": 4,
-                    "message": 5,
-                    "code": 6
+                    "code": 5
                 },
                 {
                     "regexp": "^\\s*(\\d*)\\s*\\|(.*)$",
