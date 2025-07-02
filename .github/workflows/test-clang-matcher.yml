@@ -18,7 +18,7 @@ jobs:
     
     - name: Setup problem matcher
       run: |
-        echo "::add-matcher::.github/clang-problem-matcher.json"
+        echo hello
     
     - name: Install Clang
       run: |
