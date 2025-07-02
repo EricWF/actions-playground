@@ -9,12 +9,7 @@
                     "line": 2,
                     "column": 3,
                     "severity": 4,
-                    "code": 5
-                },
-                {
-                    "regexp": "^\\s*(\\d*)\\s*\\|(.*)$",
-                    "loop": true,
-                    "message": 2
+                    "message": 5
                 }
             ]
         }
