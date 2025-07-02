@@ -1,0 +1,3 @@
+/__w/llvm-project/llvm-project/build/generic-modules/include/c++/v1/__functional/hash.h:155:25: error: unknown sanitizer 'shift-out-of-bounds' ignored [-Werror,-Wunknown-sanitizers]
+    155 |   _LIBCPP_HIDE_FROM_ABI _LIBCPP_DISABLE_UBSAN_UNSIGNED_INTEGER_CHECK static _Size
+        |                         ^

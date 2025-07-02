@@ -15,17 +15,25 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-    
-    - name: Install Clang
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y clang
-    
-    - name: Compile with Clang (this will fail)
+
+    - name: Setup problem matcher
       run: |
         echo "::add-matcher::.github/clang-problem-matcher.json"
-        clang++ -Wall -Werror -std=c++17 src/test.cpp -o test
+
+    - name: Show Problem
+      run: |
+        cat clang-error.txt 1>&2
+
+    #- name: Install Clang
+    #  run: |
+    #    sudo apt-get update
+    #    sudo apt-get install -y clang
+    #
+    #- name: Compile with Clang (this will fail)
+    #  run: |
+    #    clang++ -Wall -Werror -std=c++17 src/test.cpp -o test
+    #  continue-on-error: true
+
+    - name: Remove problem matcher
+      run: |
         echo "::remove-matcher owner=clang::"
-        exit 1
-
-
