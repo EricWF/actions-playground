@@ -16,10 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Setup problem matcher
-      run: |
-        echo hello
-    
     - name: Install Clang
       run: |
         sudo apt-get update
@@ -27,9 +23,9 @@ jobs:
     
     - name: Compile with Clang (this will fail)
       run: |
+        echo "::add-matcher::.github/clang-problem-matcher.json"
         clang++ -Wall -Werror -std=c++17 src/test.cpp -o test
-      continue-on-error: true
-    
-    - name: Remove problem matcher
-      run: |
         echo "::remove-matcher owner=clang::"
+      continue-on-error: true
+
+
