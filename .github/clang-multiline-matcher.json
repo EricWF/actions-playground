@@ -1,0 +1,23 @@
+{
+    "problemMatcher": [
+        {
+            "owner": "clang-multiline",
+            "pattern": [
+                {
+                    "regexp": "^(.+?):(\\d+):(\\d+):\\s+(error|warning|note):\\s+(.+?)(?:\\s+\\[(.+?)\\])?$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5,
+                    "code": 6
+                },
+                {
+                    "regexp": "^\\s*(\\d+)\\s*\\|(.*)$",
+                    "line": 1,
+                    "loop": true
+                }
+            ]
+        }
+    ]
+}
